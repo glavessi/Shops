@@ -10,8 +10,7 @@ using System.Threading.Tasks;
 namespace Shops.Data.EF.DAL
 {
     public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : class
-    {
-        private bool disposedValue;
+    {        
         protected readonly ChallengeDBContext _Context;
 
         public BaseRepository(ChallengeDBContext context)
@@ -116,35 +115,6 @@ namespace Shops.Data.EF.DAL
             {
                 throw new Exception($"{nameof(entity)} could not be updated: {ex.Message}");
             }
-        }
-
-        protected virtual void Dispose(bool disposing)
-        {
-            if (!disposedValue)
-            {
-                if (disposing)
-                {
-                    // TODO: dispose managed state (managed objects)
-                }
-
-                // TODO: free unmanaged resources (unmanaged objects) and override finalizer
-                // TODO: set large fields to null
-                disposedValue = true;
-            }
-        }
-
-        // // TODO: override finalizer only if 'Dispose(bool disposing)' has code to free unmanaged resources
-        // ~BaseRepository()
-        // {
-        //     // Do not change this code. Put cleanup code in 'Dispose(bool disposing)' method
-        //     Dispose(disposing: false);
-        // }
-
-        public void Dispose()
-        {
-            // Do not change this code. Put cleanup code in 'Dispose(bool disposing)' method
-            Dispose(disposing: true);
-            GC.SuppressFinalize(this);
-        }
+        }      
     }
 }
