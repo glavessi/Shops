@@ -1,8 +1,14 @@
 # Shops
 Challenge project for Code Exitos
 
-To run the project you can simply download it and make sure nugget dependencies compile.
-Attached a backup for a test database (ChallengeDB) in the solution tree.
+To run the project:
+
+-Download it and make sure nugget dependencies compile.
+-Make sure starting project is set to Shops.App.
+-If you have a special route for your SQLDatabase you can change the DBContext in the appsettings.json in Shops.App project.
+-Attached a backup for a SQL test database (ChallengeDB) with data in the solution folder.
+-To restore the DB simply open SQL Server Management Studio (install it if you dont have it yet) and select "restore database" on your SQL instance and attach the ChallengeDB.bak file provided here.
+-Now Simply run the project and it should run just fine.
 
 
 
